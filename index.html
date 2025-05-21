@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Callan - Mechanical Engineering Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Tailwind's default sans-serif is good, Inter is a common choice */
+        }
+        .active-tab {
+            background-color: #0284c7; /* sky-600 */
+            color: white;
+        }
+        .inactive-tab {
+            background-color: #e5e7eb; /* gray-200 */
+            color: #374151; /* gray-700 */
+        }
+        .inactive-tab:hover {
+            background-color: #d1d5db; /* gray-300 */
+        }
+        .content-section {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .icon-text {
+            display: inline-flex;
+            align-items: center;
+        }
+        .icon-text svg {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-gray-800 min-h-screen flex flex-col">
+
+    <header class="bg-sky-700 text-white py-8 shadow-lg">
+        <div class="container mx-auto px-6 text-center flex flex-col items-center">
+            <img src="https://placehold.co/120x120/a8a29e/ffffff?text=Your+Photo" alt="Profile Picture" class="rounded-full w-24 h-24 mb-4 border-4 border-white shadow-md">
+            <h1 class="text-4xl font-bold">Jennifer Callan</h1>
+            <p class="text-xl mt-2">Mechanical Engineering Undergraduate Student</p>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <ul class="flex flex-wrap justify-center sm:justify-start space-x-2 sm:space-x-4 py-3">
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="overview">Overview</button></li>
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="education">Education</button></li>
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="skills">Skills</button></li>
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="experience">Experience</button></li>
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="projects">Projects & Research</button></li>
+                <li><button class="tab-button inactive-tab py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors duration-150" data-target="awards">Awards</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8 flex-grow">
+        
+        <section id="overview" class="content-section">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-4">Summary</h2>
+                <p class="text-lg leading-relaxed">
+                    This section provides a brief professional summary. It highlights key attributes, academic background, and career aspirations, offering a quick insight into Jennifer Callan's profile as a Mechanical Engineering student.
+                </p>
+                <p class="mt-4 text-gray-700 leading-relaxed">
+                    Motivated and adaptable Mechanical Engineering undergraduate student with a strong academic background and practical experience in tutoring, problem-solving, and project-based learning. Eager to apply analytical skills and a passion for engineering in a dynamic internship setting, contributing to innovative projects and collaborating with experienced professionals.
+                </p>
+            </div>
+        </section>
+
+        <section id="education" class="content-section hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-6">Education</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Details about Jennifer Callan's academic qualifications are presented here. This includes degrees pursued, institutions attended, graduation dates, and GPAs, showcasing her educational foundation in engineering and science.
+                </p>
+                <div class="space-y-6">
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">SUNY New Paltz</h3>
+                        <p class="text-md text-gray-600">New Paltz, NY</p>
+                        <p class="mt-1"><strong>B.S. Mechanical Engineering</strong></p>
+                        <p class="text-sm text-gray-500">Expected Graduation: Spring 2027</p>
+                        <p class="text-sm text-gray-500">GPA: 3.1</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">SUNY Ulster</h3>
+                        <p class="text-md text-gray-600">Stone Ridge, NY</p>
+                        <p class="mt-1"><strong>A.S. Mathematics & Science</strong></p>
+                        <p class="text-sm text-gray-500">Graduated: Spring 2022</p>
+                        <p class="text-sm text-gray-500">GPA: 3.97</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-6">Technical Skills</h2>
+                 <p class="text-lg leading-relaxed mb-6">
+                    This section outlines Jennifer Callan's technical competencies. It includes software proficiency, conceptual knowledge relevant to mechanical engineering, and any experience with specific tools or lab equipment.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Software:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>SolidWorks</li>
+                            <li>AutoCAD</li>
+                            <li>MATLAB</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Concepts:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Thermodynamics</li>
+                            <li>Mechanics of Materials</li>
+                            <li>Fluid Mechanics</li>
+                            <li>Calculus</li>
+                            <li>Physics</li>
+                            <li>Chemistry</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Tools:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Hand tools</li>
+                            <li>Power Tools</li>
+                            <li>Soldering</li>
+                            <li>Lab equipment - if applicable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="content-section hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-6">Work Experience</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Here, Jennifer Callan's professional history is detailed. Each role includes the position title, organization, dates of employment, and key responsibilities or achievements, demonstrating practical skills and work ethic.
+                </p>
+                <div class="space-y-6">
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Research Assistant</h3>
+                        <p class="text-md text-gray-600">SUNY New Paltz, New Paltz, New York</p>
+                        <p class="text-sm text-gray-500">May 2025 – Present</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Conducting comprehensive research and literature reviews related to ongoing engineering projects.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Mathematics Peer Tutor</h3>
+                        <p class="text-md text-gray-600">SUNY New Paltz, New Paltz, NY</p>
+                        <p class="text-sm text-gray-500">Fall 2023</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Provided comprehensive tutoring to college students in various mathematics courses, including College Algebra, Precalculus, and Calculus.</li>
+                            <li>Developed tailored explanations and problem-solving strategies to enhance student understanding and academic performance.</li>
+                        </ul>
+                    </div>
+                     <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Mathematics and Chemistry Peer Tutor</h3>
+                        <p class="text-md text-gray-600">SUNY Ulster, Stone Ridge, NY</p>
+                        <p class="text-sm text-gray-500">Fall 2021 – Spring 2022</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Assisted students with challenging concepts in General Chemistry, College Algebra, Precalculus, and Calculus.</li>
+                            <li>Fostered a supportive learning environment, improving student comprehension and confidence.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Janitor</h3>
+                        <p class="text-md text-gray-600">NYS Department of Environmental Conservation (DEC), Kenneth L. Wilson Campground</p>
+                        <p class="text-sm text-gray-500">Summer 2022</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Maintained cleanliness and sanitation standards across campsites and all guest facilities.</li>
+                            <li>Managed guest check-ins and issued camping and admission documentation.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Server/Food Runner</h3>
+                        <p class="text-md text-gray-600">Arrowood Farms</p>
+                        <p class="text-sm text-gray-500">Summer 2020 – Fall 2020</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Delivered high-quality customer service, ensuring positive guest experiences in a fast-paced restaurant environment.</li>
+                            <li>Contributed to maintaining the cleanliness and operational readiness of the restaurant grounds.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Farm Employee/Cashier</h3>
+                        <p class="text-md text-gray-600">Kelder's Farm</p>
+                        <p class="text-sm text-gray-500">Summer 2018</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600 space-y-1">
+                            <li>Managed farm grounds maintenance and prepared produce for market, ensuring product quality and presentation.</li>
+                            <li>Handled cash transactions and provided customer assistance, developing foundational customer service skills.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-6">Projects & Research</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    This area highlights significant academic or personal projects and research endeavors undertaken by Jennifer Callan. It provides an opportunity to showcase practical application of skills and any notable achievements or findings.
+                </p>
+                <div class="space-y-6">
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Stockholm Junior Regional Water Prize</h3>
+                        <p class="text-md text-gray-600">Rondout Valley High School</p>
+                        <p class="text-sm text-gray-500">Summer 2020 – Spring 2022</p>
+                        <p class="mt-2 text-gray-600">(Add a brief description of your project, its purpose, your role, and key outcomes. E.g., "Conducted research on [topic] resulting in [outcome/findings].")</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-700">Junior Science and Humanities Symposium Award in Biochemistry</h3>
+                        <p class="text-md text-gray-600">Rondout Valley High School</p>
+                        <p class="text-sm text-gray-500">Spring 2018</p>
+                        <p class="mt-2 text-gray-600">Biodegradable plastic research</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="content-section hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-6">Scholarships and Awards</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Jennifer Callan's academic and extracurricular recognitions are listed here. This section includes scholarships, awards, and honors received, reflecting her dedication and achievements.
+                </p>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">SUNY Ulster</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                        <li>Louis Berger Memorial Scholarship (Spring 2022)</li>
+                        <li>Marie and Guido J. Napoletano Family Memorial Scholarship (Spring 2022)</li>
+                        <li>Professor Benjamin P. Stormer Memorial Scholarship (Spring 2022)</li>
+                        <li>Walter W. Bartlett Memorial Scholarship (Spring 2022)</li>
+                        <li>Professor Ann LeFevre Gilchrist Scholarship (Spring 2022)</li>
+                        <li>Dr. Roger and Dr. Rosanne Yetzer Mathematics Scholarship (Spring 2021)</li>
+                        <li>College Scholars Award (Spring 2021)</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Rondout Valley High School</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Shawangunk Snowmobile & Rescue Award (Spring 2018)</li>
+                        <li>Lou Gross Memorial Scholarship (Spring 2018)</li>
+                        <li>Ellenville Regional Hospital Auxiliary Scholarship Award (Spring 2018)</li>
+                        <li>Rondout Valley Scholarship Fund Academic Achievement Scholarship (Spring 2018)</li>
+                        <li>Gladys M. Gray "One Minute Without Pain" Memorial Scholarship (Spring 2018)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+            <div class="space-y-2 sm:space-y-0 sm:flex sm:justify-center sm:space-x-8">
+                <p class="icon-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                    <a href="mailto:j_callan02@outlook.com" class="hover:text-sky-400">j_callan02@outlook.com</a>
+                </p>
+                <p class="icon-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                    (Your Phone Number)
+                </p>
+                <p class="icon-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                    Kerhonkson, NY 12446
+                </p>
+                 <p class="icon-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>
+                    <a href="(Your LinkedIn Profile URL)" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400">(Your LinkedIn Profile URL)</a>
+                </p>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">&copy; <span id="currentYear"></span> Jennifer Callan. All rights reserved.</p>
+            <p class="text-xs text-gray-600 mt-1">Interactive resume generated on: <span id="generationDate"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const sections = document.querySelectorAll('.content-section');
+            const activeTabClass = 'active-tab';
+            const inactiveTabClass = 'inactive-tab';
+
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove(activeTabClass);
+                        t.classList.add(inactiveTabClass);
+                    });
+                    tab.classList.add(activeTabClass);
+                    tab.classList.remove(inactiveTabClass);
+                    
+                    const targetSectionId = tab.dataset.target;
+                    showSection(targetSectionId);
+                });
+            });
+
+            if (tabs.length > 0) {
+                tabs[0].click(); 
+            }
+
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('generationDate').textContent = now.toLocaleDateString(undefined, options) + " " + now.toLocaleTimeString(undefined, {timeZoneName:'short'}).split(' ')[2];
+
+
+        });
+    </script>
+
+</body>
+</html>
